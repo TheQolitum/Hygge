@@ -4,7 +4,7 @@
       <navigation />
       <div class="container">
         <div class="main__bg"></div>
-        <div class="main__text">Островок датского счастья в сердце Сибири!</div>
+        <div class="main__text">Островок датского   в сердце Сибири!</div>
       </div>
     </div>
     <div class="apres__ski__block">
