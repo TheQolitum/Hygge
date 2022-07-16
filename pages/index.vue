@@ -16,19 +16,18 @@
     </div>
     <div class="photo__block">
       <div class="container">
-        <div class="photo__bg"></div>
-        <div class="kitchen__text">HYGGE - уютный apres-ski бар, который расположился в самом центре горнолыжного
-          курорта Шерегеш, ная. Наша команда создаёт настоящий уют и комфорт для гостей.</div>
+
       </div>
     </div>
     <div class="kitchen__block">
       <div class="container">
         <div class="kitchen__bg"></div>
-        <div class="kitchen__text">HYGGE - уютный apres-ski бар, который расположился в самом центре горнолыжного
-        курорта Шерегеш, у подножья горы Зелёная. Наша команда создаёт настоящий уют и комфорт для гостей.</div>
+        <div class="kitchen__text">HYGGE объединяет лучшие блюда датской и европейской кухни. В меню предствлены
+          классические датские сморреброды, а так же авторские блюда от нашего шефа. Для нашего бара привозим
+          необычные сорта крафтового пива и сидра.
+        </div>
        </div>
       </div>
-
     </div>
 </template>
 
@@ -37,11 +36,19 @@
 </script>
 
 <style lang="css">
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("/fonts/Montserrat-Regular/fonts/Montserrat-Regular.ttf");
+  src: url("/fonts/Montserrat-Regular/fonts/Montserrat-Regular.eot");
+  src: url("/fonts/Montserrat-Regular/fonts/Montserrat-Regular.woff");
+  src: url("/fonts/Montserrat-Regular/fonts/Montserrat-Regular.svg");
+}
 *, *:after, *:before {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   transition: .5s ease-in-out;
+  font-family: Montserrat-Regular;
 }
 ul {
   list-style: none;
@@ -77,7 +84,8 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
   background-position: center;
 }
 .main__bg{
-  background-image: url("assets/main.jpg");
+  background-color: green;
+  background-image: url("assets/main.webp");
   position: absolute;
   width: 100%;
   height: 100%;
@@ -108,7 +116,9 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
   background-position: center;
 }
 .apres__ski__bg{
-  background-image: url("assets/smorrebrodpear2.JPG");
+  background-color: green;
+
+  background-image: url("assets/smorrebrodpear2.webp");
   position: absolute;
   width: 100%;
   height: 100%;
@@ -123,7 +133,7 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
   color: white;
   max-width: 500px;
   max-height: 524px;
-  margin: 50px 0 50px 0;
+  margin: 50px;
   font-size: 24px;
   line-height: 30px;
   letter-spacing: 1px;
@@ -139,7 +149,8 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
   background-position: center;
 }
 .photo__bg{
-  background-image: url("assets/beer.JPG");
+  background-color: green;
+  background-image: url("assets/smorrebrodbanan.webp");
   position: absolute;
   width: 100%;
   height: 100%;
@@ -157,7 +168,8 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
   background-position: center;
 }
 .kitchen__bg{
-  background-image: url("assets/smorrebrodbanan.JPG");
+  background-color: green;
+  background-image: url("assets/beer.webp");
   position: absolute;
   width: 100%;
   height: 100%;
@@ -170,9 +182,9 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
 .kitchen__text{
   position: absolute;
   color: white;
-  max-width: 500px;
-  max-height: 524px;
-  margin: 50px 0 50px 0;
+  max-width: 515px;
+  /*max-height: 524px;*/
+  margin: 50px;
   font-size: 24px;
   line-height: 30px;
   letter-spacing: 1px;

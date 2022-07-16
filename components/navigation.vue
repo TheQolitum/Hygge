@@ -71,7 +71,7 @@ export default {
   display: none;
 }
 .menu__list{
-  font-size: 25px;
+  font-size: 20px;
 }
 li{
   list-style-type: none;
