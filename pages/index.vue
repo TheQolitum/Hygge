@@ -1,34 +1,56 @@
 <template>
-  <div>
-    <div class="main__block">
-      <navigation />
+<div>
+  <div class="main__block">
+    <div class="main__bg"></div>
       <div class="container">
-        <div class="main__bg"></div>
-        <div class="main__text">Островок датского   в сердце Сибири!</div>
+        <navigation />
+        <p class="main__text">Островок датского счастья в сердце Сибири!</p>
       </div>
-    </div>
+  </div>
     <div class="apres__ski__block">
-      <div class="container">
-        <div class="apres__ski__bg"></div>
-        <div class="apres__ski__text">HYGGE - уютный apres-ski бар, который расположился в самом центре горнолыжного
-        курорта Шерегеш, у подножья горы Зелёная. Наша команда создаёт настоящий уют и комфорт для гостей.</div>
+      <div class="apres__ski__bg"></div>
+        <div class="container">
+        <p class="apres__ski__text">HYGGE - уютный apres-ski бар, который расположился в самом центре горнолыжного
+        курорта Шерегеш, у подножья горы Зелёная. Наша команда создаёт настоящий уют и комфорт для гостей.</p>
       </div>
     </div>
-    <div class="photo__block">
+  <div class="kitchen__block">
+    <div class="kitchen__bg"></div>
       <div class="container">
-
+        <p class="kitchen__text">HYGGE объединяет лучшие блюда датской и европейской кухни.</p>
+        <p class="sub-kitchen__text">В меню предствлены классические датские сморреброды, а так
+        же авторские блюда от нашего шефа.</p>
       </div>
     </div>
-    <div class="kitchen__block">
-      <div class="container">
-        <div class="kitchen__bg"></div>
-        <div class="kitchen__text">HYGGE объединяет лучшие блюда датской и европейской кухни. В меню предствлены
-          классические датские сморреброды, а так же авторские блюда от нашего шефа. Для нашего бара привозим
-          необычные сорта крафтового пива и сидра.
+  <photo />
+  <div class="beer__block">
+    <div class="beer__bg"></div>
+    <div class="container">
+      <p class="beer__text"> Для нашего бара, мы привозим
+      необычные сорта крафтового пива и сидра.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <br>
+      <div class="info">
+        <div class="column">
+          <p style="font-weight: 600">Ежедневно с 09:00 до 19:00</p>
         </div>
-       </div>
+        <div class="column">
+          <p style="font-weight: 600">Контактные данные</p>
+          <p>+7-911-025-79-68</p>
+          <p>gesh.hygge@gmail.com</p>
+        </div>
       </div>
+      <br>
+      <p class="ip">2018−22 © ИП Писенко Е.В. ИНН: 000 000 000 000 ОГРН: 000 000 000 000 000</p>
     </div>
+    <br>
+    <div class="footer__img"></div>
+    <br>
+  </div>
+</div>
 </template>
 
 <script>
@@ -47,7 +69,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: .5s ease-in-out;
+  /*transition: .5s ease-in-out;*/
   font-family: Montserrat-Regular;
 }
 ul {
@@ -62,19 +84,13 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
   display: table;
   clear: both;
 }
-/*@media (min-width: 767px) {*/
-/*  .text__apres-ski{*/
-/*    max-width: 500px;*/
-/*    max-height: 524px;*/
-/*    margin: 50px 40px 0 40px;*/
-/*    padding: 40px;*/
-/*  }*/
-/*}*/
 .container {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
-  padding: 0 15px;
+  /*padding: 0 15px;*/
+  height: 100%;
+  position: relative;
 }
 .main__block{
   position: relative;
@@ -84,8 +100,7 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
   background-position: center;
 }
 .main__bg{
-  background-color: green;
-  background-image: url("assets/main.webp");
+  background-image: url("assets/around.webp");
   position: absolute;
   width: 100%;
   height: 100%;
@@ -94,17 +109,17 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
   background-position: center;
   background-size: cover;
   z-index: -5;
+  background-attachment: fixed;
 }
 .main__text{
   position: absolute;
   color: white;
-  max-width: 450px;
-  max-height: 200px;
-  margin: 170px 50px 0 50px;
-  font-size: 48px;
+  max-width: 500px;
+  margin: 170px 50px 0 0;
+  font-size: clamp(24px, 5vw, 40px);
   line-height: 70px;
   letter-spacing: 1px;
-  /*padding: 40px;*/
+  padding: 40px;
   /*background: rgba(0, 0, 0, 0.75);*/
   /*border-radius: 24px;*/
 }
@@ -127,38 +142,21 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
   background-position: center;
   background-size: cover;
   z-index: -5;
+  background-attachment: fixed;
 }
 .apres__ski__text{
   position: absolute;
   color: white;
   max-width: 500px;
-  max-height: 524px;
+  /*max-height: 524px;*/
   margin: 50px;
-  font-size: 24px;
+  font-size: clamp(1rem, 0.7857rem + 0.9524vw, 1.5rem);
   line-height: 30px;
   letter-spacing: 1px;
   padding: 40px;
   background: rgba(0, 0, 0, 0.75);
   border-radius: 24px;
-}
-.photo__block{
-  position: relative;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.photo__bg{
-  background-color: green;
-  background-image: url("assets/smorrebrodbanan.webp");
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  /*top: 200vh;*/
-  left: 0;
-  background-position: center;
-  background-size: cover;
-  z-index: -5;
+  bottom: 100px;
 }
 .kitchen__block{
   position: relative;
@@ -169,6 +167,54 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
 }
 .kitchen__bg{
   background-color: green;
+  background-image: url("assets/main.webp");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*top: 300vh;*/
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  z-index: -5;
+  background-attachment: fixed;
+}
+.kitchen__text{
+  position: absolute;
+  color: white;
+  max-width: 515px;
+  /*max-height: 524px;*/
+  margin: 50px;
+  font-size: clamp(1rem, 0.7857rem + 0.9524vw, 1.5rem);
+  line-height: 30px;
+  letter-spacing: 1px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 24px;
+}
+.sub-kitchen__text{
+  position: absolute;
+  color: white;
+  max-width: 515px;
+  /*max-height: 524px;*/
+  margin: 50px;
+  font-size: clamp(1rem, 0.7857rem + 0.9524vw, 1.5rem);
+  line-height: 30px;
+  letter-spacing: 1px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 24px;
+  right: 0;
+  bottom: 0;
+}
+.beer__block{
+  position: relative;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.beer__bg{
+  background-color: green;
   background-image: url("assets/beer.webp");
   position: absolute;
   width: 100%;
@@ -178,18 +224,86 @@ header:after, .container:after, footer:after, .widget-posts-list li:after {
   background-position: center;
   background-size: cover;
   z-index: -5;
+  background-attachment: fixed;
 }
-.kitchen__text{
+.beer__text{
   position: absolute;
   color: white;
   max-width: 515px;
   /*max-height: 524px;*/
   margin: 50px;
-  font-size: 24px;
+  font-size: clamp(1rem, 0.7857rem + 0.9524vw, 1.5rem);
   line-height: 30px;
   letter-spacing: 1px;
   padding: 40px;
   background: rgba(0, 0, 0, 0.75);
   border-radius: 24px;
+  right: 150px;
+  bottom: 150px;
+}
+.footer{
+  background-color: black;
+  color: white;
+  font-size: clamp(1rem, 0.7857rem + 0.9524vw, 1.5rem);
+}
+.info{
+  display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+}
+.column{
+  flex: 1 0 50%;
+}
+.ip{
+  font-size: 12px;
+}
+.footer__img{
+  background-image: url("assets/footer.png");
+  height: 180px;
+  width: 100%;
+  background-repeat: repeat-x;
+  background-size: 310px;
+}
+@media (max-width: 767px) {
+.main__text{
+  line-height: 40px;
+  margin: 0;
+  left: 0;
+}
+.apres__ski__text, .kitchen__text, .beer__text{
+  line-height: 25px;
+  margin: 50px;
+  left: 0;
+}
+.beer__text{
+  bottom: 0;
+  right: 0;
+}
+.info{
+  padding: 10px;
+}
+.ip{
+  padding: 10px;
+}
+}
+@media (max-height: 800px) {
+.main__text{
+  bottom: 0;
+}
+.apres__ski__text{
+ bottom: 0;
+}
+.kitchen__text{
+  padding: 24px;
+}
+.sub-kitchen__text{
+  padding: 24px;
+}
+.info{
+  padding: 10px;
+}
+.ip{
+  padding: 10px;
+}
 }
 </style>

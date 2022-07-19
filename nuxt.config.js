@@ -16,7 +16,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/heggeIcon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/hyggeIcon.ico' }
     ]
   },
 
@@ -33,6 +33,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    'vue-ssr-carousel/nuxt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
