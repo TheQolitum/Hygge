@@ -41,13 +41,13 @@ export default {
   methods: {
     changeClass() {
       this.isdropMenu = !this.isdropMenu;
-      if(this.isdropMenu){
-      document.documentElement.style.overflow = 'hidden'
+      if (this.isdropMenu) {
+        document.documentElement.style.overflow = 'hidden'
         return
       }
       document.documentElement.style.overflow = 'auto'
-    }
-  }
+    },
+  },
 }
 </script>
 
