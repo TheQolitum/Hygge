@@ -3,7 +3,7 @@
     <div class="container">
       <h2>Наши блюда</h2>
       <br>
-      <ssr-carousel :slides-per-page='2' loop show-dots paginate-by-slide="false" peek="1">
+      <ssr-carousel :slides-per-page='2' loop show-dots :responsive="responsive" :paginate-by-slide="true" peek="1">
         <div class="slide"><img src="~/assets/smorrebrodcucumbersmall.webp" alt="Сморреброд"></div>
         <div class="slide"><img src="~/assets/smorrebrodeggsmall.webp" alt="Сморреброд с яйцом и беконом"></div>
         <div class="slide"><img src="~/assets/smorrebrodpearsmall.webp" alt="Сморреброд с грушей и гарганзолой"></div>
@@ -14,7 +14,22 @@
   </div>
 </template>
 <script>
-
+  export default {
+    data() {
+      return {
+        responsive: [
+          {
+            maxWidth: 1000,
+            slidesPerPage: 2
+          },
+          {
+            maxWidth: 900,
+            slidesPerPage: 1
+          },
+        ]
+      }
+    }
+  }
 </script>
 
 <style lang="css">
