@@ -19,16 +19,13 @@
       return {
         responsive: [
           {
-            maxWidth: 1000,
-            slidesPerPage: 2
-          },
-          {
             maxWidth: 900,
             slidesPerPage: 1
           },
         ]
       }
     }
+
   }
 </script>
 

@@ -36,7 +36,7 @@
   <footer class="footer">
     <div class="container">
       <br>
-      <div class="info" id="cont">
+      <div class="info" ref="cont">
         <div class="column">
           <p style="font-weight: 600">Ежедневно с 09:00 до 19:00</p>
         </div>

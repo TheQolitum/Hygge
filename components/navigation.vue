@@ -21,7 +21,7 @@
         <div class="menu__body"  v-bind:class="{dropMenu: isdropMenu}">
           <ul class="menu__list">
 <!--            <li><a href="" class="menu__link">Фотографии</a></li>-->
-            <li><a href="" class="menu__link">Контакты</a></li>
+            <li><a @click="toContact" class="menu__link">Контакты</a></li>
             <li><a href= "https://2gis.ru/sheregesh/firm/70000001041135887/87.888239%2C52.930251?m=87.888272%2C52.930256%2F19.62" class="menu__link" target="_blank">Сектор  YEAH</a></li>
           </ul>
         </div>
@@ -36,7 +36,11 @@ export default {
   data() {
     return {
       isdropMenu: false,
+      refa: {}
     }
+  },
+  mounted() {
+    this.refa = this.$parent.$refs.cont;
   },
   methods: {
     changeClass() {
@@ -47,6 +51,16 @@ export default {
       }
       document.documentElement.style.overflow = 'auto'
     },
+    toContact() {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        this.changeClass();
+      }
+      let offset = this.refa.getBoundingClientRect().y;
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+      });
+    }
   },
 }
 </script>
